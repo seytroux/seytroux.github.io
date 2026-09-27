@@ -88,10 +88,11 @@ a { color: inherit; text-decoration: none; }
 
 .obra-imagen {
   width: 100%;
-  max-width: 480px;
+  max-width: 320px;
   height: auto;
   display: block;
-  margin: 0 auto 0.6rem;
+  margin: 0 auto 0.8rem;
+  cursor: zoom-in;
 }
 
 .obra-titulo {
@@ -135,6 +136,32 @@ a { color: inherit; text-decoration: none; }
 
 .obra-texto p {
   margin: 0 0 1rem;
+}
+
+/* Visor de imagen a tamaño real */
+
+.lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(28, 27, 25, 0.92);
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  cursor: zoom-out;
+  z-index: 10;
+}
+
+.lightbox.visible {
+  display: flex;
+}
+
+.lightbox img {
+  max-width: 90vw;
+  max-height: 90vh;
+  width: auto;
+  height: auto;
+  display: block;
 }
 
 /* Footer */

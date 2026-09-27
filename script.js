@@ -2,6 +2,16 @@ document.getElementById("anio").textContent = new Date().getFullYear();
 
 const stream = document.getElementById("stream");
 const filtros = document.querySelectorAll(".filtro");
+const lightbox = document.getElementById("lightbox");
+const lightboxImg = document.getElementById("lightbox-img");
+
+function abrirLightbox(src, alt) {
+  lightboxImg.src = src;
+  lightboxImg.alt = alt;
+  lightbox.classList.add("visible");
+}
+
+lightbox.addEventListener("click", () => lightbox.classList.remove("visible"));
 
 function formatearFecha(anio) {
   return anio;
@@ -25,8 +35,8 @@ function render(filtro) {
     li.className = "obra";
 
     li.innerHTML = `
+      ${obra.imagen ? `<img class="obra-imagen" src="${obra.imagen}" alt="${obra.titulo}" loading="lazy">` : ""}
       <button class="obra-cabecera" aria-expanded="false">
-        ${obra.imagen ? `<img class="obra-imagen" src="${obra.imagen}" alt="${obra.titulo}" loading="lazy">` : ""}
         <span class="obra-titulo">${obra.titulo}</span>
         <span class="obra-categoria">${etiquetas[obra.categoria]}${obra.estado ? ` · ${obra.estado}` : ""}</span>
       </button>
@@ -35,6 +45,11 @@ function render(filtro) {
 
     const cabecera = li.querySelector(".obra-cabecera");
     const detalle = li.querySelector(".obra-detalle");
+    const imagenEl = li.querySelector(".obra-imagen");
+
+    if (imagenEl) {
+      imagenEl.addEventListener("click", () => abrirLightbox(obra.imagen, obra.titulo));
+    }
 
     const fechaEl = document.createElement("p");
     fechaEl.className = "obra-fecha";
