@@ -27,7 +27,7 @@ const obras = [
     id: "a los lectores",
     fecha: "2026",
     categoria: "poesia",
-    titulo: "[A los lectores]",
+    titulo: "A los lectores",
     resumen: "Abro las puertas de mi templo vacío",
     texto: "dejando que la luna decida mi gloria\n\nmientras me humillo en pena vencido\n\ncon miedos y dolores\n\nalegrías y clamores\n\npasen y vean este crescendo sostenido\n\nmientras angustiado escribo mi memoria\n\ny cierro las puertas de mi templo vacío.",
     imagen: null
@@ -97,11 +97,11 @@ const obras = [
     imagen: null
   },
   {
-    id: "ejemplo-pintura",
-    fecha: "2025",
+    id: "el-milagro-de-santa-juana",
+    fecha: "2026",
     categoria: "pintura",
-    titulo: "[Título de la obra]",
-    resumen: "Óleo sobre tela, 60 × 80 cm",
+    titulo: "el milagro de santa juana",
+    resumen: "Óleo sobre hoja, 21,6 × 33 cm",
     texto: null,
     imagen: "images/pintura-01.jpg"
   },
