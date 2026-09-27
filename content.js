@@ -16,16 +16,20 @@
                separar párrafos o estrofas. Dejalo en null si no aplica.
   - imagen:    (pintura / fotografía) ruta al archivo dentro de /images.
                Dejalo en null si no aplica.
+  - estado:    opcional. Si la obra todavía no está terminada, poné
+               algo como "borrador" o "en proceso" y va a aparecer
+               como una marca discreta junto a la categoría. Si ya
+               está terminada, no incluyas este campo.
 */
 
 const obras = [
   {
-    id: "poema-1",
+    id: "a los lectores",
     fecha: "2026",
     categoria: "poesia",
     titulo: "[A los lectores]",
     resumen: "Abro las puertas de mi templo vacío",
-    texto: "dejando que la luna decida mi gloria.\n\nmientras me humillo en pena vencido.\n\ncon miedos y dolores\n\nalegrías y clamores\n\npasen y vean este crescendo sostenido\n\nmientras angustiado escribo mi memoria\n\ny cierro las puertas de mi templo vacío.",
+    texto: "dejando que la luna decida mi gloria\n\nmientras me humillo en pena vencido\n\ncon miedos y dolores\n\nalegrías y clamores\n\npasen y vean este crescendo sostenido\n\nmientras angustiado escribo mi memoria\n\ny cierro las puertas de mi templo vacío.",
     imagen: null
   },
   {
@@ -83,12 +87,13 @@ const obras = [
     imagen: null
   },
   {
-    id: "ejemplo-texto",
-    fecha: "2025",
+    id: "la-ocupacion-del-hermano",
+    fecha: "2026",
     categoria: "literatura",
-    titulo: "[Título del texto o relato]",
-    resumen: "Copete breve del texto",
-    texto: "Acá va el cuerpo del texto en prosa. Podés escribir varios párrafos separándolos con una línea en blanco, igual que en el poema.",
+    titulo: "sin título",
+    estado: "borrador",
+    resumen: "Caía lánguidamente la tarde en el Paraná",
+    texto: "Caía lánguidamente la tarde en el Paraná un Jueves Santo cuando avistamos las máquinas virando hacia nuestras costas. Gigantes de vapor y acero volvieron sobre sus pasos. Allí mismo empezaron a bombardear, y poco pudieron hacer los hombres a bordo del 25 de Mayo para frenar a las tropas paraguayas. Una vez se hicieron con el puerto, la ciudad ya estaba perdida a manos de los hombres de Lopez.\n\nAlgunos huyeron hacia el interior, algunos se encontraron felices de la nueva ocupación y otros nos mantuvimos distantes. Lo cierto es que siempre nos quedó lejos Buenos Aires, y, durante esos días de ocupación, la gente se confinó en sus casas, confiando en que el tiempo apaciguaría estas aguas turbulentas.\n\nResultó que yo no tenía dónde caer parado el día de la invasión, por suerte llegué a un acuerdo de palabra con un dentista gallego que tenía su casa sobre la calle Santa Fe para ayudar en lo que pudiera a cambio de que me dejara quedarme ahí. Me mandó al fondo en un pequeño cuarto lleno de herramientas cubiertas de herrumbre que solo olía a humedad. Esa noche misma cayó un chaparrón que hizo que el techo de palma fuese un colador, y no tuve más remedio que correr a la casa para guarecerme de la tempestad. Ya en ese momento, me llamó la atención ver a altas horas de la noche la luz del cuarto de don Feliciano prendida, no sabía todavía qué pensar, por supuesto.",
     imagen: null
   },
   {

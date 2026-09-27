@@ -28,7 +28,7 @@ function render(filtro) {
       <button class="obra-cabecera" aria-expanded="false">
         <span class="obra-fecha">${formatearFecha(obra.fecha)}</span>
         <span class="obra-titulo">${obra.titulo}</span>
-        <span class="obra-categoria">${etiquetas[obra.categoria]}</span>
+        <span class="obra-categoria">${etiquetas[obra.categoria]}${obra.estado ? ` · ${obra.estado}` : ""}</span>
       </button>
       <div class="obra-detalle"></div>
     `;
@@ -45,7 +45,7 @@ function render(filtro) {
     }
     if (obra.texto) {
       const p = document.createElement("div");
-      p.className = "obra-texto";
+      p.className = "obra-texto" + (obra.categoria === "poesia" ? " centrado" : "");
       p.innerHTML = obra.texto.split("\n\n").map(par => `<p>${par}</p>`).join("");
       detalle.appendChild(p);
     }
