@@ -20,12 +20,12 @@
 
 const obras = [
   {
-    id: "ejemplo-poema",
-    fecha: "2026-01-15",
+    id: "poema-1",
+    fecha: "2026",
     categoria: "poesia",
-    titulo: "[Reemplazá con el título de tu poema]",
-    resumen: "Primer verso o línea a modo de entrada",
-    texto: "Acá va el texto completo del poema.\n\nCada línea en blanco separa una estrofa.\n\nBorrá este texto de ejemplo y pegá el tuyo.",
+    titulo: "[A los lectores]",
+    resumen: "Abro las puertas de mi templo vacío",
+    texto: "dejando que la luna decida mi gloria.\n\nmientras me humillo en pena vencido.\n\ncon miedos y dolores\n\nalegrías y clamores\n\npasen y vean este crescendo sostenido\n\nmientras angustiado escribo mi memoria\n\ny cierro las puertas de mi templo vacío.",
     imagen: null
   },
   {
