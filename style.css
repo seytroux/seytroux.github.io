@@ -24,14 +24,13 @@ a { color: inherit; text-decoration: none; }
 
 .site-header {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: baseline;
-  gap: 1rem 2rem;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
   max-width: 720px;
   margin: 0 auto;
-  padding: 3rem 1.5rem 2rem;
-  border-bottom: 1px solid var(--line);
+  padding: 3rem 1.5rem 2.5rem;
+  text-align: center;
 }
 
 .site-title {
@@ -42,6 +41,7 @@ a { color: inherit; text-decoration: none; }
 .site-nav {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 0.4rem 1.1rem;
   font-family: var(--sans);
   font-size: 0.88rem;
@@ -65,38 +65,38 @@ a { color: inherit; text-decoration: none; }
   margin: 0 auto;
   padding: 0 1.5rem;
   max-width: 720px;
+  text-align: center;
 }
 
 .obra {
-  border-bottom: 1px solid var(--line);
+  margin-bottom: 3rem;
 }
 
 .obra-cabecera {
   display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-  gap: 0 1rem;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
   width: 100%;
   background: none;
   border: none;
-  padding: 1.4rem 0;
-  text-align: left;
+  padding: 0;
   cursor: pointer;
   font-family: inherit;
   color: inherit;
 }
 
-.obra-fecha {
-  font-family: var(--sans);
-  font-size: 0.82rem;
-  color: var(--ink-soft);
-  min-width: 2.8rem;
+.obra-imagen {
+  width: 100%;
+  max-width: 480px;
+  height: auto;
+  display: block;
+  margin: 0 auto 0.6rem;
 }
 
 .obra-titulo {
   font-size: 1.2rem;
   font-style: italic;
-  flex: 1;
 }
 
 .obra-categoria {
@@ -105,13 +105,22 @@ a { color: inherit; text-decoration: none; }
   color: var(--ink-soft);
 }
 
+.obra-fecha {
+  font-family: var(--sans);
+  font-size: 0.82rem;
+  color: var(--ink-soft);
+  margin: 0.8rem 0 0;
+}
+
 .obra-resumen {
-  display: none;
+  margin: 0.3rem 0 0;
+  font-size: 0.95rem;
+  color: var(--ink-soft);
 }
 
 .obra-detalle {
   display: none;
-  margin: 0 0 1.8rem 2.8rem;
+  margin: 0 auto;
   max-width: 62ch;
 }
 
@@ -119,14 +128,9 @@ a { color: inherit; text-decoration: none; }
   display: block;
 }
 
-.obra-detalle img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-.obra-texto.centrado {
+.obra-texto {
   text-align: center;
+  margin-top: 0.8rem;
 }
 
 .obra-texto p {
@@ -137,12 +141,12 @@ a { color: inherit; text-decoration: none; }
 
 .site-footer {
   max-width: 720px;
-  margin: 2rem auto 0;
+  margin: 3rem auto 0;
   padding: 1.5rem;
   font-family: var(--sans);
   font-size: 0.8rem;
   color: var(--ink-soft);
-  border-top: 1px solid var(--line);
+  text-align: center;
 }
 
 /* Cita en Sobre mí */
@@ -157,8 +161,5 @@ a { color: inherit; text-decoration: none; }
 /* Mobile */
 
 @media (max-width: 560px) {
-  .obra-detalle {
-    margin-left: 0;
-  }
   .obra-titulo { font-size: 1.05rem; }
 }

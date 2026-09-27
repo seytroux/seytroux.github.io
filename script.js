@@ -26,7 +26,7 @@ function render(filtro) {
 
     li.innerHTML = `
       <button class="obra-cabecera" aria-expanded="false">
-        <span class="obra-fecha">${formatearFecha(obra.fecha)}</span>
+        ${obra.imagen ? `<img class="obra-imagen" src="${obra.imagen}" alt="${obra.titulo}" loading="lazy">` : ""}
         <span class="obra-titulo">${obra.titulo}</span>
         <span class="obra-categoria">${etiquetas[obra.categoria]}${obra.estado ? ` · ${obra.estado}` : ""}</span>
       </button>
@@ -36,16 +36,21 @@ function render(filtro) {
     const cabecera = li.querySelector(".obra-cabecera");
     const detalle = li.querySelector(".obra-detalle");
 
-    if (obra.imagen) {
-      const img = document.createElement("img");
-      img.src = obra.imagen;
-      img.alt = obra.titulo;
-      img.loading = "lazy";
-      detalle.appendChild(img);
+    const fechaEl = document.createElement("p");
+    fechaEl.className = "obra-fecha";
+    fechaEl.textContent = formatearFecha(obra.fecha);
+    detalle.appendChild(fechaEl);
+
+    if (obra.resumen) {
+      const resumenEl = document.createElement("p");
+      resumenEl.className = "obra-resumen";
+      resumenEl.textContent = obra.resumen;
+      detalle.appendChild(resumenEl);
     }
+
     if (obra.texto) {
       const p = document.createElement("div");
-      p.className = "obra-texto" + (obra.categoria === "poesia" ? " centrado" : "");
+      p.className = "obra-texto";
       p.innerHTML = obra.texto.split("\n\n").map(par => `<p>${par}</p>`).join("");
       detalle.appendChild(p);
     }
