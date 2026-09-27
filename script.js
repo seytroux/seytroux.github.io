@@ -41,7 +41,7 @@ function render(filtro) {
     fechaEl.textContent = formatearFecha(obra.fecha);
     detalle.appendChild(fechaEl);
 
-    if (obra.resumen) {
+    if (obra.resumen && !obra.texto) {
       const resumenEl = document.createElement("p");
       resumenEl.className = "obra-resumen";
       resumenEl.textContent = obra.resumen;
