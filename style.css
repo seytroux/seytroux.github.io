@@ -1,0 +1,154 @@
+:root {
+  --paper: #F6F3EC;
+  --ink: #1C1B19;
+  --ink-soft: #6B675E;
+  --accent: #3F5236;
+  --line: #DAD4C4;
+  --serif: "Merriweather", Georgia, serif;
+  --sans: "Inter", -apple-system, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--serif);
+  line-height: 1.6;
+}
+
+a { color: inherit; text-decoration: none; }
+
+/* Header */
+
+.site-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem 2rem;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem 2rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.site-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1.1rem;
+  font-family: var(--sans);
+  font-size: 0.88rem;
+  color: var(--ink-soft);
+}
+
+.site-nav a:hover,
+.site-nav a.activo {
+  color: var(--accent);
+}
+
+.site-nav a.activo {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* Stream */
+
+.stream {
+  list-style: none;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  max-width: 720px;
+}
+
+.obra {
+  border-bottom: 1px solid var(--line);
+}
+
+.obra-cabecera {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0 1rem;
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 1.4rem 0 0.3rem;
+  text-align: left;
+  cursor: pointer;
+  font-family: inherit;
+  color: inherit;
+}
+
+.obra-fecha {
+  font-family: var(--sans);
+  font-size: 0.82rem;
+  color: var(--ink-soft);
+  min-width: 4.5rem;
+}
+
+.obra-titulo {
+  font-size: 1.2rem;
+  font-style: italic;
+  flex: 1;
+}
+
+.obra-categoria {
+  font-family: var(--sans);
+  font-size: 0.78rem;
+  color: var(--ink-soft);
+}
+
+.obra-resumen {
+  margin: 0 0 1.2rem 4.5rem;
+  font-size: 0.95rem;
+  color: var(--ink-soft);
+}
+
+.obra-detalle {
+  display: none;
+  margin: 0 0 1.8rem 4.5rem;
+  max-width: 62ch;
+}
+
+.obra.abierta .obra-detalle {
+  display: block;
+}
+
+.obra-detalle img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.obra-texto p {
+  margin: 0 0 1rem;
+}
+
+/* Footer */
+
+.site-footer {
+  max-width: 720px;
+  margin: 2rem auto 0;
+  padding: 1.5rem;
+  font-family: var(--sans);
+  font-size: 0.8rem;
+  color: var(--ink-soft);
+  border-top: 1px solid var(--line);
+}
+
+/* Mobile */
+
+@media (max-width: 560px) {
+  .obra-resumen,
+  .obra-detalle {
+    margin-left: 0;
+  }
+  .obra-titulo { font-size: 1.05rem; }
+}
