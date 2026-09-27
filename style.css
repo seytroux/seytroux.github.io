@@ -79,7 +79,7 @@ a { color: inherit; text-decoration: none; }
   width: 100%;
   background: none;
   border: none;
-  padding: 1.4rem 0 0.3rem;
+  padding: 1.4rem 0;
   text-align: left;
   cursor: pointer;
   font-family: inherit;
@@ -90,7 +90,7 @@ a { color: inherit; text-decoration: none; }
   font-family: var(--sans);
   font-size: 0.82rem;
   color: var(--ink-soft);
-  min-width: 4.5rem;
+  min-width: 2.8rem;
 }
 
 .obra-titulo {
@@ -106,14 +106,12 @@ a { color: inherit; text-decoration: none; }
 }
 
 .obra-resumen {
-  margin: 0 0 1.2rem 4.5rem;
-  font-size: 0.95rem;
-  color: var(--ink-soft);
+  display: none;
 }
 
 .obra-detalle {
   display: none;
-  margin: 0 0 1.8rem 4.5rem;
+  margin: 0 0 1.8rem 2.8rem;
   max-width: 62ch;
 }
 
@@ -125,6 +123,10 @@ a { color: inherit; text-decoration: none; }
   width: 100%;
   height: auto;
   display: block;
+}
+
+.obra-texto {
+  text-align: center;
 }
 
 .obra-texto p {
@@ -143,10 +145,18 @@ a { color: inherit; text-decoration: none; }
   border-top: 1px solid var(--line);
 }
 
+/* Cita en Sobre mí */
+
+.cita-imagen {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 0 2.5rem;
+}
+
 /* Mobile */
 
 @media (max-width: 560px) {
-  .obra-resumen,
   .obra-detalle {
     margin-left: 0;
   }

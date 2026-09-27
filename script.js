@@ -3,11 +3,8 @@ document.getElementById("anio").textContent = new Date().getFullYear();
 const stream = document.getElementById("stream");
 const filtros = document.querySelectorAll(".filtro");
 
-const meses = ["ene","feb","mar","abr","may","jun","jul","ago","sep","oct","nov","dic"];
-
-function formatearFecha(iso) {
-  const [anio, mes] = iso.split("-");
-  return `${meses[parseInt(mes, 10) - 1]} ${anio}`;
+function formatearFecha(anio) {
+  return anio;
 }
 
 const etiquetas = {
@@ -33,7 +30,6 @@ function render(filtro) {
         <span class="obra-titulo">${obra.titulo}</span>
         <span class="obra-categoria">${etiquetas[obra.categoria]}</span>
       </button>
-      <p class="obra-resumen">${obra.resumen}</p>
       <div class="obra-detalle"></div>
     `;
 
