@@ -38,7 +38,6 @@ function render(filtro) {
       ${obra.imagen ? `<img class="obra-imagen" src="${obra.imagen}" alt="${obra.titulo}" loading="lazy">` : ""}
       <button class="obra-cabecera" aria-expanded="false">
         <span class="obra-titulo">${obra.titulo}</span>
-        <span class="obra-categoria">${etiquetas[obra.categoria]}${obra.estado ? ` · ${obra.estado}` : ""}</span>
       </button>
       <div class="obra-detalle"></div>
     `;
@@ -49,6 +48,13 @@ function render(filtro) {
 
     if (imagenEl) {
       imagenEl.addEventListener("click", () => abrirLightbox(obra.imagen, obra.titulo));
+    }
+
+    if (obra.estado) {
+      const estadoEl = document.createElement("p");
+      estadoEl.className = "obra-categoria";
+      estadoEl.textContent = obra.estado;
+      detalle.appendChild(estadoEl);
     }
 
     const fechaEl = document.createElement("p");
