@@ -29,7 +29,7 @@ const obras = [
     categoria: "poesia",
     titulo: "A los lectores",
     resumen: "Abro las puertas de mi templo vacío",
-    texto: "dejando que la luna decida mi gloria\n\nmientras me humillo en pena vencido\n\ncon miedos y dolores\n\nalegrías y clamores\n\npasen y vean este crescendo sostenido\n\nmientras angustiado escribo mi memoria\n\ny cierro las puertas de mi templo vacío.",
+    texto: "Abro las puertas de mi templo vacío\n\ndejando que la luna decida mi gloria\n\nmientras me humillo en pena vencido\n\ncon miedos y dolores\n\nalegrías y clamores\n\npasen y vean este crescendo sostenido\n\nmientras angustiado escribo mi memoria\n\ny cierro las puertas de mi templo vacío.",
     imagen: null
   },
   {
@@ -106,12 +106,94 @@ const obras = [
     imagen: "images/pintura-01.jpg"
   },
   {
-    id: "ejemplo-foto",
+    id: "el-milagro-de-santa-juana",
+    fecha: "2026",
+    categoria: "pintura",
+    titulo: "el milagro de santa juana",
+    estado: "borrador",
+    resumen: "lápiz carbonilla sobre hoja, 21 × 29,7 cm",
+    texto: null,
+    imagen: "images/pintura-02.jpg"
+  },
+  {
+    id: "foto1",
     fecha: "2025",
     categoria: "fotografia",
-    titulo: "[Título o lugar de la foto]",
-    resumen: "Corrientes, 2025",
+    titulo: "sol a través del monte",
+    resumen: "riachuelo, 2025",
     texto: null,
     imagen: "images/foto-01.jpg"
+  },
+  {
+    id: "foto2",
+    fecha: "2026",
+    categoria: "fotografia",
+    titulo: "campo ",
+    resumen: "parque ávalos, 2026",
+    texto: null,
+    imagen: "images/foto-02.jpg"
+  },
+  {
+    id: "foto3",
+    fecha: "2025",
+    categoria: "fotografia",
+    titulo: "una ventana",
+    resumen: "san telmo, 2025",
+    texto: null,
+    imagen: "images/foto-03.jpg"
+  },
+  {
+    id: "foto4",
+    fecha: "2025",
+    categoria: "fotografia",
+    titulo: "dos árboles",
+    resumen: "paso de la patria, 2025",
+    texto: null,
+    imagen: "images/foto-04.jpg"
+  },
+  {
+    id: "foto5",
+    fecha: "2025",
+    categoria: "fotografia",
+    titulo: "banco sobre el rio",
+    resumen: "isla del cerrito, 2025",
+    texto: null,
+    imagen: "images/foto-05.jpg"
+  },
+  {
+    id: "foto6",
+    fecha: "2025",
+    categoria: "fotografia",
+    titulo: "jazmines y cielo",
+    resumen: "patio de casa, 2025",
+    texto: null,
+    imagen: "images/foto-06.jpg"
+  },
+  {
+    id: "foto7",
+    fecha: "2026",
+    categoria: "fotografia",
+    titulo: "luminarias",
+    resumen: "corrientes, 2026",
+    texto: null,
+    imagen: "images/foto-07.jpg"
+  },
+  {
+    id: "foto8",
+    fecha: "2025",
+    categoria: "fotografia",
+    titulo: "fisherlady",
+    resumen: "corrientes, 2026",
+    texto: null,
+    imagen: "images/foto-08.jpg"
+  },
+  {
+    id: "foto9",
+    fecha: "2025",
+    categoria: "fotografia",
+    titulo: "borde",
+    resumen: "ruiz de montoya, 2026",
+    texto: null,
+    imagen: "images/foto-09.jpg"
   }
 ];
