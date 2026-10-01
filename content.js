@@ -87,6 +87,24 @@ const obras = [
     imagen: null
   },
   {
+    id: "sin-titulo-atalayas",
+    fecha: "2026",
+    categoria: "poesia",
+    titulo: "sin título",
+    resumen: "Empastadas en odio vigilan las rosadas atalayas el devenir de nuestros días",
+    texto: "Empastadas en odio vigilan las rosadas atalayas el devenir de nuestros días.\n\nPero las nubes siempre espían a través de la ventana, ¡guardianas de la alegría!\n\nPero las frondosas ramas me envuelven en la plaza, ¡refugiándome en armonía!\n\nPero los jazmines, al llegar al patio, me husmean, excitados, ¡un poco de compañía!",
+    imagen: null
+  },
+  {
+    id: "santo-tomas",
+    fecha: "2026",
+    categoria: "poesia",
+    titulo: "Santo Tomás",
+    resumen: "De súbito Tomás agazapado",
+    texto: "De súbito Tomás agazapado\n\nel pórtico cruzó con desenfreno,\n\ncon la duda subiendo cual veneno\n\nen el templo de noche ya cerrado.\n\nVeloz corrió, descalzo y desvelado,\n\nel índice clavó como un barreno\n\nen la carne del Cristo Nazareno,\n\nsediento por estar equivocado.\n\nY la vergüenza de los diez notó\n\nal ponerse a dudar de lo divino.\n\nDe aquel ungido tornasol brotó\n\nun líquido viscoso cristalino.\n\nCegado de radiante luz gritó:\n\n¡Señor, embriágueme en ese tu vino!",
+    imagen: null
+  },
+  {
     id: "la-ocupacion-del-hermano",
     fecha: "2026",
     categoria: "literatura",
@@ -122,7 +140,7 @@ const obras = [
     titulo: "sol a través del monte",
     resumen: "riachuelo, 2025",
     texto: null,
-    imagen: "images/foto-1.jpg"
+    imagen: "images/foto-01.jpg"
   },
   {
     id: "foto2",
@@ -131,7 +149,7 @@ const obras = [
     titulo: "campo ",
     resumen: "parque ávalos, 2026",
     texto: null,
-    imagen: "images/foto-2.jpg"
+    imagen: "images/foto-02.jpg"
   },
   {
     id: "foto3",
@@ -140,7 +158,7 @@ const obras = [
     titulo: "una ventana",
     resumen: "san telmo, 2025",
     texto: null,
-    imagen: "images/foto-3.jpg"
+    imagen: "images/foto-03.jpg"
   },
   {
     id: "foto4",
@@ -149,7 +167,7 @@ const obras = [
     titulo: "dos árboles",
     resumen: "paso de la patria, 2025",
     texto: null,
-    imagen: "images/foto-4.jpg"
+    imagen: "images/foto-04.jpg"
   },
   {
     id: "foto5",
@@ -158,7 +176,7 @@ const obras = [
     titulo: "banco sobre el rio",
     resumen: "isla del cerrito, 2025",
     texto: null,
-    imagen: "images/foto-5.jpg"
+    imagen: "images/foto-05.jpg"
   },
   {
     id: "foto6",
@@ -167,7 +185,7 @@ const obras = [
     titulo: "jazmines y cielo",
     resumen: "patio de casa, 2025",
     texto: null,
-    imagen: "images/foto-6.jpg"
+    imagen: "images/foto-06.jpg"
   },
   {
     id: "foto7",
@@ -176,7 +194,7 @@ const obras = [
     titulo: "luminarias",
     resumen: "corrientes, 2026",
     texto: null,
-    imagen: "images/foto-7.jpg"
+    imagen: "images/foto-07.jpg"
   },
   {
     id: "foto8",
@@ -185,7 +203,7 @@ const obras = [
     titulo: "fisherlady",
     resumen: "corrientes, 2026",
     texto: null,
-    imagen: "images/foto-8.jpg"
+    imagen: "images/foto-08.jpg"
   },
   {
     id: "foto9",
@@ -194,6 +212,6 @@ const obras = [
     titulo: "borde",
     resumen: "ruiz de montoya, 2026",
     texto: null,
-    imagen: "images/foto-9.jpg"
+    imagen: "images/foto-09.jpg"
   }
 ];

@@ -26,9 +26,26 @@ const etiquetas = {
 
 const orden_categorias = ["poesia", "literatura", "pintura", "fotografia"];
 
+function ordenarPorFecha(lista) {
+  // Más reciente primero. Si dos obras comparten año, gana la que
+  // esté más abajo en content.js (se asume que lo nuevo se agrega al final).
+  const ordenada = [...lista].sort((a, b) => {
+    const porFecha = b.fecha.localeCompare(a.fecha);
+    if (porFecha !== 0) return porFecha;
+    return obras.indexOf(b) - obras.indexOf(a);
+  });
+
+  const idx = ordenada.findIndex(o => o.id === "a los lectores");
+  if (idx > 0) {
+    const [lectores] = ordenada.splice(idx, 1);
+    ordenada.unshift(lectores);
+  }
+  return ordenada;
+}
+
 function intercalar(lista) {
   const grupos = orden_categorias.map(cat =>
-    lista.filter(o => o.categoria === cat).sort((a, b) => b.fecha.localeCompare(a.fecha))
+    ordenarPorFecha(lista.filter(o => o.categoria === cat))
   );
 
   const resultado = [];
@@ -45,19 +62,13 @@ function intercalar(lista) {
     i++;
   }
 
-  const idxLectores = resultado.findIndex(o => o.id === "a los lectores");
-  if (idxLectores > 0) {
-    const [lectores] = resultado.splice(idxLectores, 1);
-    resultado.unshift(lectores);
-  }
-
   return resultado;
 }
 
 function render(filtro) {
   const visibles = filtro === "todo"
     ? intercalar(obras)
-    : [...obras].filter(o => o.categoria === filtro).sort((a, b) => b.fecha.localeCompare(a.fecha));
+    : ordenarPorFecha(obras.filter(o => o.categoria === filtro));
 
   stream.innerHTML = "";
 
