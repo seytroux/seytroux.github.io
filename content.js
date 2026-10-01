@@ -121,7 +121,7 @@ const obras = [
     titulo: "el milagro de santa juana",
     resumen: "Óleo sobre hoja, 21,6 × 33 cm",
     texto: null,
-    imagen: "images/pintura-01.jpg"
+    imagen: "images/pintura-1.jpg"
   },
   {
     id: "el-milagro-de-santa-juana",
@@ -131,7 +131,7 @@ const obras = [
     estado: "borrador",
     resumen: "lápiz carbonilla sobre hoja, 21 × 29,7 cm",
     texto: null,
-    imagen: "images/pintura-02.jpg"
+    imagen: "images/pintura-2.jpg"
   },
   {
     id: "foto1",
@@ -140,7 +140,7 @@ const obras = [
     titulo: "sol a través del monte",
     resumen: "riachuelo, 2025",
     texto: null,
-    imagen: "images/foto-01.jpg"
+    imagen: "images/foto-1.jpg"
   },
   {
     id: "foto2",
@@ -149,7 +149,7 @@ const obras = [
     titulo: "campo ",
     resumen: "parque ávalos, 2026",
     texto: null,
-    imagen: "images/foto-02.jpg"
+    imagen: "images/foto-2.jpg"
   },
   {
     id: "foto3",
@@ -158,7 +158,7 @@ const obras = [
     titulo: "una ventana",
     resumen: "san telmo, 2025",
     texto: null,
-    imagen: "images/foto-03.jpg"
+    imagen: "images/foto-3.jpg"
   },
   {
     id: "foto4",
@@ -167,7 +167,7 @@ const obras = [
     titulo: "dos árboles",
     resumen: "paso de la patria, 2025",
     texto: null,
-    imagen: "images/foto-04.jpg"
+    imagen: "images/foto-4.jpg"
   },
   {
     id: "foto5",
@@ -176,7 +176,7 @@ const obras = [
     titulo: "banco sobre el rio",
     resumen: "isla del cerrito, 2025",
     texto: null,
-    imagen: "images/foto-05.jpg"
+    imagen: "images/foto-5.jpg"
   },
   {
     id: "foto6",
@@ -185,7 +185,7 @@ const obras = [
     titulo: "jazmines y cielo",
     resumen: "patio de casa, 2025",
     texto: null,
-    imagen: "images/foto-06.jpg"
+    imagen: "images/foto-6.jpg"
   },
   {
     id: "foto7",
@@ -194,7 +194,7 @@ const obras = [
     titulo: "luminarias",
     resumen: "corrientes, 2026",
     texto: null,
-    imagen: "images/foto-07.jpg"
+    imagen: "images/foto-7.jpg"
   },
   {
     id: "foto8",
@@ -203,7 +203,7 @@ const obras = [
     titulo: "fisherlady",
     resumen: "corrientes, 2026",
     texto: null,
-    imagen: "images/foto-08.jpg"
+    imagen: "images/foto-8.jpg"
   },
   {
     id: "foto9",
@@ -212,6 +212,6 @@ const obras = [
     titulo: "borde",
     resumen: "ruiz de montoya, 2026",
     texto: null,
-    imagen: "images/foto-09.jpg"
+    imagen: "images/foto-9.jpg"
   }
 ];
