@@ -121,7 +121,7 @@ const obras = [
     titulo: "el milagro de santa juana",
     resumen: "Óleo sobre hoja, 21,6 × 33 cm",
     texto: null,
-    imagen: "images/pintura-1.jpg"
+    imagen: "images/pintura-01.jpg"
   },
   {
     id: "el-milagro-de-santa-juana",
@@ -131,7 +131,7 @@ const obras = [
     estado: "borrador",
     resumen: "lápiz carbonilla sobre hoja, 21 × 29,7 cm",
     texto: null,
-    imagen: "images/pintura-2.jpg"
+    imagen: "images/pintura-02.jpg"
   },
   {
     id: "foto1",
