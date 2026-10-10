@@ -5,13 +5,46 @@ const filtros = document.querySelectorAll(".filtro");
 const lightbox = document.getElementById("lightbox");
 const lightboxImg = document.getElementById("lightbox-img");
 
-function abrirLightbox(src, alt) {
-  lightboxImg.src = src;
-  lightboxImg.alt = alt;
+const lbPrev = document.getElementById("lb-prev");
+const lbNext = document.getElementById("lb-next");
+const lbContador = document.getElementById("lb-contador");
+
+let galeria = [];
+let galeriaIdx = 0;
+let galeriaAlt = "";
+
+function mostrarGaleria() {
+  lightboxImg.src = galeria[galeriaIdx];
+  lightboxImg.alt = galeriaAlt;
+  const varias = galeria.length > 1;
+  lbPrev.style.display = varias ? "" : "none";
+  lbNext.style.display = varias ? "" : "none";
+  lbContador.textContent = varias ? `${galeriaIdx + 1} / ${galeria.length}` : "";
+}
+
+function abrirLightbox(imagenes, alt) {
+  galeria = imagenes;
+  galeriaIdx = 0;
+  galeriaAlt = alt;
+  mostrarGaleria();
   lightbox.classList.add("visible");
 }
 
+function moverGaleria(paso) {
+  galeriaIdx = (galeriaIdx + paso + galeria.length) % galeria.length;
+  mostrarGaleria();
+}
+
 lightbox.addEventListener("click", () => lightbox.classList.remove("visible"));
+lbPrev.addEventListener("click", e => { e.stopPropagation(); moverGaleria(-1); });
+lbNext.addEventListener("click", e => { e.stopPropagation(); moverGaleria(1); });
+
+document.addEventListener("keydown", e => {
+  if (!lightbox.classList.contains("visible")) return;
+  if (e.key === "Escape") lightbox.classList.remove("visible");
+  if (e.key === "ArrowLeft" && galeria.length > 1) moverGaleria(-1);
+  if (e.key === "ArrowRight" && galeria.length > 1) moverGaleria(1);
+});
 
 function formatearFecha(anio) {
   return anio;
@@ -21,10 +54,11 @@ const etiquetas = {
   poesia: "Poesía",
   literatura: "Literatura",
   pintura: "Pintura",
-  fotografia: "Fotografía"
+  fotografia: "Fotografía",
+  arquitectura: "Arquitectura"
 };
 
-const orden_categorias = ["poesia", "literatura", "pintura", "fotografia"];
+const orden_categorias = ["poesia", "literatura", "pintura", "fotografia", "arquitectura"];
 
 function ordenarPorFecha(lista) {
   // Más reciente primero. Si dos obras comparten año, gana la que
@@ -76,8 +110,12 @@ function render(filtro) {
     const li = document.createElement("li");
     li.className = "obra";
 
+    const imagenes = obra.imagenes && obra.imagenes.length
+      ? obra.imagenes
+      : (obra.imagen ? [obra.imagen] : []);
+
     li.innerHTML = `
-      ${obra.imagen ? `<img class="obra-imagen" src="${obra.imagen}" alt="${obra.titulo}" loading="lazy">` : ""}
+      ${imagenes.length ? `<img class="obra-imagen" src="${imagenes[0]}" alt="${obra.titulo}" loading="lazy">` : ""}
       <button class="obra-cabecera" aria-expanded="false">
         <span class="obra-titulo">${obra.titulo}</span>
       </button>
@@ -89,7 +127,7 @@ function render(filtro) {
     const imagenEl = li.querySelector(".obra-imagen");
 
     if (imagenEl) {
-      imagenEl.addEventListener("click", () => abrirLightbox(obra.imagen, obra.titulo));
+      imagenEl.addEventListener("click", () => abrirLightbox(imagenes, obra.titulo));
     }
 
     if (obra.estado) {

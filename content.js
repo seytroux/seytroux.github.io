@@ -9,13 +9,18 @@
   Campos:
   - id:        identificador único, sin espacios (ej: "poema-tres")
   - fecha:     "AAAA" (solo el año) — se usa para ordenar el archivo cronológico
-  - categoria: "poesia" | "literatura" | "pintura" | "fotografia"
+  - categoria: "poesia" | "literatura" | "pintura" | "fotografia" | "arquitectura"
   - titulo:    título de la obra
   - resumen:   una línea o frase breve que se ve en el listado
   - texto:     (poesía / literatura) el texto completo. Usá "\n\n" para
                separar párrafos o estrofas. Dejalo en null si no aplica.
-  - imagen:    (pintura / fotografía) ruta al archivo dentro de /images.
+  - imagen:    (pintura / fotografía / arquitectura) ruta al archivo dentro de /images.
                Dejalo en null si no aplica.
+  - imagenes:  opcional. Para un proyecto con varias imágenes (diapositivas),
+               usá una lista: imagenes: ["images/arq-01.jpg", "images/arq-02.jpg"].
+               En el listado se ve la primera; al hacer click se abre el
+               visor y se navega con flechas. Si usás "imagenes", no hace
+               falta "imagen" (dejalo en null).
   - estado:    opcional. Si la obra todavía no está terminada, poné
                algo como "borrador" o "en proceso" y va a aparecer
                como una marca discreta junto a la categoría. Si ya
@@ -204,6 +209,15 @@ const obras = [
     resumen: "corrientes, 2026",
     texto: null,
     imagen: "images/foto-8.jpg"
+  },
+  {
+    id: "registros_2024",
+    fecha: "2024",
+    categoria: "arquitectura",
+    titulo: "registros",
+    resumen: "registro de cuadernos, 2024",
+    texto: null,
+    imagenes: ["images/registro-01.jpg", "images/registro-02.jpg"]
   },
   {
     id: "foto9",
