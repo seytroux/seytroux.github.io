@@ -39,6 +39,23 @@ lightbox.addEventListener("click", () => lightbox.classList.remove("visible"));
 lbPrev.addEventListener("click", e => { e.stopPropagation(); moverGaleria(-1); });
 lbNext.addEventListener("click", e => { e.stopPropagation(); moverGaleria(1); });
 
+let toqueX = 0;
+let toqueY = 0;
+
+lightbox.addEventListener("touchstart", e => {
+  toqueX = e.changedTouches[0].clientX;
+  toqueY = e.changedTouches[0].clientY;
+}, { passive: true });
+
+lightbox.addEventListener("touchend", e => {
+  if (galeria.length < 2) return;
+  const dx = e.changedTouches[0].clientX - toqueX;
+  const dy = e.changedTouches[0].clientY - toqueY;
+  if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy)) {
+    moverGaleria(dx < 0 ? 1 : -1);
+  }
+}, { passive: true });
+
 document.addEventListener("keydown", e => {
   if (!lightbox.classList.contains("visible")) return;
   if (e.key === "Escape") lightbox.classList.remove("visible");

@@ -154,6 +154,7 @@ a { color: inherit; text-decoration: none; }
 
 .lightbox.visible {
   display: flex;
+  touch-action: pan-y;
 }
 
 .lightbox img {
