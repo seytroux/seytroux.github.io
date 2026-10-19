@@ -110,6 +110,24 @@ const obras = [
     imagen: null
   },
   {
+    id: "san-lorenzo",
+    fecha: "2026",
+    categoria: "poesia",
+    titulo: "San Lorenzo",
+    resumen: "Al ritmo de Chepoya",
+    texto: "Al ritmo de Chepoya\n\nBailaban en alto sus sables corvos\n\n¡Que el destino es ya!\n\nGritaban, valerosos\n\nSu sangre derramaron por nosotros",
+    imagen: null
+  },
+  {
+    id: "juicio",
+    fecha: "2026",
+    categoria: "poesia",
+    titulo: "Juicio",
+    resumen: "Roza el clavicordio mi tímpano rebosante",
+    texto: "Roza el clavicordio mi tímpano rebosante\n\nQue me vibra en su luz la buena fortuna\n\nCuando me someto al veredicto de la luna\n\nEvocando el llamamiento en clave eternizante.",
+    imagen: null
+  },
+  {
     id: "la-ocupacion-del-hermano",
     fecha: "2026",
     categoria: "literatura",
@@ -218,6 +236,15 @@ const obras = [
     resumen: "registro de cuadernos, 2024",
     texto: null,
     imagenes: ["images/registro-01.jpg", "images/registro-02.jpg"]
+  },
+  {
+    id: "mapa-corrientes-2023",
+    fecha: "2023",
+    categoria: "arquitectura",
+    titulo: "¿en qué nos convertimos?",
+    resumen: "¿qué hubiéramos sido?",
+    texto: null,
+    imagen: "images/mapacorrientes2023-1.jpg"
   },
   {
     id: "foto9",
