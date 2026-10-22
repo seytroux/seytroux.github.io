@@ -8,14 +8,27 @@ const lightboxImg = document.getElementById("lightbox-img");
 const lbPrev = document.getElementById("lb-prev");
 const lbNext = document.getElementById("lb-next");
 const lbContador = document.getElementById("lb-contador");
+const lbDescripcion = document.getElementById("lb-descripcion");
+
+// Una imagen puede ser un texto ("images/a.jpg") o un objeto
+// { src, descripcion, estado } para llevar su propia leyenda.
+function normalizarImagen(item) {
+  return typeof item === "string" ? { src: item } : item;
+}
 
 let galeria = [];
 let galeriaIdx = 0;
 let galeriaAlt = "";
 
 function mostrarGaleria() {
-  lightboxImg.src = galeria[galeriaIdx];
+  const actual = galeria[galeriaIdx];
+  lightboxImg.src = actual.src;
   lightboxImg.alt = galeriaAlt;
+  const leyenda = actual.descripcion
+    ? actual.descripcion + (actual.estado ? ` · ${actual.estado}` : "")
+    : "";
+  lbDescripcion.textContent = leyenda;
+  lightbox.classList.toggle("con-descripcion", Boolean(leyenda));
   const varias = galeria.length > 1;
   lbPrev.style.display = varias ? "" : "none";
   lbNext.style.display = varias ? "" : "none";
@@ -23,7 +36,7 @@ function mostrarGaleria() {
 }
 
 function abrirLightbox(imagenes, alt) {
-  galeria = imagenes;
+  galeria = imagenes.map(normalizarImagen);
   galeriaIdx = 0;
   galeriaAlt = alt;
   mostrarGaleria();
@@ -127,12 +140,12 @@ function render(filtro) {
     const li = document.createElement("li");
     li.className = "obra";
 
-    const imagenes = obra.imagenes && obra.imagenes.length
+    const imagenes = (obra.imagenes && obra.imagenes.length
       ? obra.imagenes
-      : (obra.imagen ? [obra.imagen] : []);
+      : (obra.imagen ? [obra.imagen] : [])).map(normalizarImagen);
 
     li.innerHTML = `
-      ${imagenes.length ? `<img class="obra-imagen" src="${imagenes[0]}" alt="${obra.titulo}" loading="lazy">` : ""}
+      ${imagenes.length ? `<img class="obra-imagen" src="${imagenes[0].src}" alt="${obra.titulo}" loading="lazy">` : ""}
       <button class="obra-cabecera" aria-expanded="false">
         <span class="obra-titulo">${obra.titulo}</span>
       </button>

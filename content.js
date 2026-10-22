@@ -18,6 +18,10 @@
                Dejalo en null si no aplica.
   - imagenes:  opcional. Para un proyecto con varias imágenes (diapositivas),
                usá una lista: imagenes: ["images/arq-01.jpg", "images/arq-02.jpg"].
+               Si cada imagen necesita su propia descripción (que cambia al
+               deslizar en el visor), usá objetos:
+               { src: "images/a.jpg", descripcion: "texto", estado: "borrador" }
+               ("descripcion" y "estado" son opcionales).
                En el listado se ve la primera; al hacer click se abre el
                visor y se navega con flechas. Si usás "imagenes", no hace
                falta "imagen" (dejalo en null).
@@ -158,17 +162,10 @@ const obras = [
     titulo: "el milagro de santa juana",
     resumen: "Óleo sobre hoja, 21,6 × 33 cm",
     texto: null,
-    imagen: "images/pintura-01.jpg"
-  },
-  {
-    id: "el-milagro-de-santa-juana",
-    fecha: "2026",
-    categoria: "pintura",
-    titulo: "el milagro de santa juana",
-    estado: "borrador",
-    resumen: "lápiz carbonilla sobre hoja, 21 × 29,7 cm",
-    texto: null,
-    imagen: "images/pintura-02.jpg"
+    imagenes: [
+      { src: "images/pintura-01.jpg", descripcion: "Óleo sobre hoja, 21,6 × 33 cm" },
+      { src: "images/pintura-02.jpg", descripcion: "lápiz carbonilla sobre hoja, 21 × 29,7 cm", estado: "borrador" }
+    ]
   },
   {
     id: "foto1",
