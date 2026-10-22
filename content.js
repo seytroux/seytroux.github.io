@@ -21,6 +21,10 @@
                En el listado se ve la primera; al hacer click se abre el
                visor y se navega con flechas. Si usás "imagenes", no hace
                falta "imagen" (dejalo en null).
+  - foto:      opcional. Para asociar una foto a un poema o texto sin que
+               se vea en el listado: foto: "images/nombre.jpg". Aparece
+               solo al abrir la obra, arriba del texto, y se agranda con
+               un click. (Distinto de "imagen", que se ve siempre.)
   - estado:    opcional. Si la obra todavía no está terminada, poné
                algo como "borrador" o "en proceso" y va a aparecer
                como una marca discreta junto a la categoría. Si ya
@@ -126,6 +130,16 @@ const obras = [
     resumen: "Roza el clavicordio mi tímpano rebosante",
     texto: "Roza el clavicordio mi tímpano rebosante\n\nQue me vibra en su luz la buena fortuna\n\nCuando me someto al veredicto de la luna\n\nEvocando el llamamiento en clave eternizante.",
     imagen: null
+  },
+  {
+    id: "el-david-de-bernini",
+    fecha: "2026",
+    categoria: "poesia",
+    titulo: "el David de Bernini",
+    resumen: "En el ceño fruncido de tu rostro",
+    texto: "En el ceño fruncido de tu rostro\n\nsucede la gesta de todas horas\n\npresente continuo que siempre afloras!\n\nmirada inmortal que ilumina el centro.\n\nOh Rey David, tú que eras tan diestro\n\nJehová guarda el sino en lo que aferras\n\n¿No te das cuenta todo lo que alteras?\n\n¿En ese segundo vuelto en espectro?",
+    imagen: null,
+    foto: "images/eldavidbernini.jpg"
   },
   {
     id: "la-ocupacion-del-hermano",

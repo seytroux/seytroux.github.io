@@ -166,6 +166,16 @@ function render(filtro) {
       detalle.appendChild(resumenEl);
     }
 
+    if (obra.foto) {
+      const fotoEl = document.createElement("img");
+      fotoEl.className = "obra-foto";
+      fotoEl.src = obra.foto;
+      fotoEl.alt = obra.titulo;
+      fotoEl.loading = "lazy";
+      fotoEl.addEventListener("click", () => abrirLightbox([obra.foto], obra.titulo));
+      detalle.appendChild(fotoEl);
+    }
+
     if (obra.texto) {
       const p = document.createElement("div");
       p.className = "obra-texto";
