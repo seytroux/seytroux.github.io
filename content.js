@@ -146,6 +146,15 @@ const obras = [
     foto: "images/eldavidbernini.jpg"
   },
   {
+    id: "domingo",
+    fecha: "2026",
+    categoria: "poesia",
+    titulo: "Domingo",
+    resumen: "El sol se escurre sobre un exhausto anaranjado,",
+    texto: "El sol se escurre sobre un exhausto anaranjado,\n\nforzado a replegarse en vergonzante letargia\n\nlas tardes de domingo que avivan mi nostalgia,\n\nllama cíclica y lenta que ya se ha consumado.\n\nlas chicharras lastiman con su incesante canto\n\nmorimos condenados por su larga hemorragia,\n\ncavemos nuestras tumbas con inmensa autofagia,\n\nque es el final: la luna ya nos ha profanado.",
+    imagen: null
+  },
+  {
     id: "la-ocupacion-del-hermano",
     fecha: "2026",
     categoria: "literatura",

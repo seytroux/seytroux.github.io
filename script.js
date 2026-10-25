@@ -93,18 +93,11 @@ const orden_categorias = ["poesia", "literatura", "pintura", "fotografia", "arqu
 function ordenarPorFecha(lista) {
   // Más reciente primero. Si dos obras comparten año, gana la que
   // esté más abajo en content.js (se asume que lo nuevo se agrega al final).
-  const ordenada = [...lista].sort((a, b) => {
+  return [...lista].sort((a, b) => {
     const porFecha = b.fecha.localeCompare(a.fecha);
     if (porFecha !== 0) return porFecha;
     return obras.indexOf(b) - obras.indexOf(a);
   });
-
-  const idx = ordenada.findIndex(o => o.id === "a los lectores");
-  if (idx > 0) {
-    const [lectores] = ordenada.splice(idx, 1);
-    ordenada.unshift(lectores);
-  }
-  return ordenada;
 }
 
 function intercalar(lista) {
