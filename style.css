@@ -145,6 +145,7 @@ a { color: inherit; text-decoration: none; }
 
 .obra-texto p {
   margin: 0 0 1rem;
+  text-wrap: balance;
 }
 
 /* Visor de imagen a tamaño real */
@@ -243,5 +244,7 @@ a { color: inherit; text-decoration: none; }
 /* Mobile */
 
 @media (max-width: 560px) {
+  .stream { padding: 0 1rem; }
+  .obra-texto.poema { font-size: clamp(11.5px, 3.4vw, 0.9rem); }
   .obra-titulo { font-size: 1.05rem; }
 }

@@ -184,7 +184,7 @@ function render(filtro) {
 
     if (obra.texto) {
       const p = document.createElement("div");
-      p.className = "obra-texto";
+      p.className = "obra-texto" + (obra.categoria === "poesia" ? " poema" : "");
       p.innerHTML = obra.texto.split("\n\n").map(par => `<p>${par}</p>`).join("");
       detalle.appendChild(p);
     }
