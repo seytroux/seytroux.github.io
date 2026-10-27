@@ -151,7 +151,7 @@ const obras = [
     categoria: "poesia",
     titulo: "Domingo",
     resumen: "El sol se escurre sobre un exhausto anaranjado,",
-    texto: "El sol se escurre sobre un exhausto anaranjado,\n\nforzado a replegarse en vergonzante letargia\n\nlas tardes de domingo que avivan mi nostalgia,\n\ncíclica y lenta llama que ya se ha consumado.\n\nLas chicharras lastiman con su incesante canto\n\nmorimos condenados por su larga hemorragia,\n\ncavemos nuestras tumbas con inmensa autofagia,\n\nPorque es el fin: la luna ya nos ha profanado.",
+    texto: "El sol se escurre sobre un exhausto anaranjado,\n\nforzado a replegarse en vergonzante letargia\n\nlas tardes de domingo que avivan mi nostalgia,\n\ncíclica y lenta llama que ya se ha consumado.\n\nLas chicharras lastiman con su incesante canto\n\nmorimos condenados por su larga hemorragia,\n\ncavemos nuestras tumbas con inmensa autofagia,\n\nporque es el fin: la luna ya nos ha profanado.",
     imagen: null
   },
   {
